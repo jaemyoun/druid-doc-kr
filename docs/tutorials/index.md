@@ -23,29 +23,26 @@ title: "Quickstart"
   -->
 
 
-This quickstart gets you started with Apache Druid using the `micro-quickstart` startup configuration and introduces you to some Druid features, including the MSQ task engine that's part of the [multi-stage query architecture](../multi-stage-query/index.md). 
+쉽게 Apache Druid를 시작하기에는 `micro-quickstart` 설정으로 시작하기를 추천한다. 이 문서는 [multi-stage query architecture](../multi-stage-query/index.md)의 일부인 MSQ task engine를 포함한 Druid의 특징을 소개한다.
 
-With the MSQ task engine, you can write query tasks that can reference [external data](../multi-stage-query/index.md#read-external-data) as well as perform ingestion with SQL [INSERT](../multi-stage-query/index.md#insert-data) and [REPLACE](../multi-stage-query/index.md#replace-data), eliminating the need to generate JSON-based ingestion specs.
+MSQ task engine과 함께, [외부 데이터](../multi-stage-query/index.md#read-external-data)를 참조한 쿼리를 실행하고 JSON 기반으로 데이터를 구성하지 않아도 [INSERT](../multi-stage-query/index.md#insert-data) and [REPLACE](../multi-stage-query/index.md#replace-data) SQL로 데이터를 삽입할 수 있다.
 
-In this quickstart, you'll do the following:
-- install Druid
-- start up Druid services
-- use the MSQ task engine to ingest data
+이 문서는 아래 내용을 포함하고 있다.
+- Druid를 설치
+- Druid 서비스 맛보기
+- MSQ task engine을 사용하여 데이터를 삽입
 
-Druid supports different ingestion engines. While we recommend SQL based ingestion, you can find tutorials for other modes of ingestion, such as [Load data with native batch ingestion](tutorial-batch-native.md).
+Druid에 데이터를 삽입하는 여러 방법이 있다. SQL을 이용한 삽입을 추천하지만, 튜토리얼 문서에서 [배치로 데이터를 삽입하는 방법도](tutorial-batch-native.md) 소개하고 있다.
 
-## Requirements
+## 요구사항
 
-You can follow these steps on a relatively small machine, such as a laptop with around 4 CPU and 16 GiB of RAM. 
+먼저, 4개의 CPU와 16 GiB RAM을 가진 상대적으로 작은 머신이 필요하다.
 
-Druid comes equipped with several startup configuration profiles for a range of machine sizes.
+Druid는 머신 크기 별로 쉽게 시작할 수 있는 설정을 이미 제공한다.
 
-The `micro-quickstart` configuration profile is suitable for evaluating Druid. If you want to 
-try out Druid's performance or scaling capabilities, you'll need a larger machine and configuration profile.
+`micro-quickstart` 설정이 Druid를 경험하기 좋다. Druid의 성능과 확장 능력을 경험하고자 한다면, 더 큰 머신과 설정을 사용하면 된다.
 
-The configuration profiles included with Druid range from the even smaller _Nano-Quickstart_ configuration (1 CPU, 4GiB RAM) 
-to the _X-Large_ configuration (64 CPU, 512GiB RAM). For more information, see [Single server deployment](../operations/single-server.md).
-For information on deploying Druid services across clustered machines, see [Clustered deployment](./cluster.md).
+설정 파일은 _Nano-Quickstart_(1 CPU, 4GiB RAM)부터 _X-Large_ configuration (64 CPU, 512GiB RAM)까지 있다. 자세한 설정은 [단일 머신 배포](../operations/single-server.md)에서 설명한다. 클러스터링은 [클러스터 배포](./cluster.md)에서 설명한다.
 
 The software requirements for the installation machine are:
 
