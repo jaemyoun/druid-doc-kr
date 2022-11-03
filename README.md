@@ -1,2 +1,5 @@
 # druid-doc-kr
-Druid Document in Korean
+
+This repository is (unoffical) Druid Documents in Korean.
+
+The translated version is tag:druid-24.0.0-rc2.
